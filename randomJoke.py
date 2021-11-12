@@ -1,10 +1,9 @@
 from os import read
 import requests
-response = requests.get("https://api.humorapi.com/jokes/random?api-key=b1b245f440084a3bba61f5b82aa0923b")
-print("Wanna hear a joke? (Y/N)")
+response = requests.get("https://api.kanye.rest")
+print("Wanna hear a random Kanye quote? (Y/N)")
 responseJoke = input()
 if "Y" in responseJoke or "y" in responseJoke:
-    joke = response.json()['joke']
-    print(joke)
+    print(response.json()['quote'])
 else:
-    print("Ok fine, no jokes :(")
+    print("Ok fine, maybe next time")
